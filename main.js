@@ -25,17 +25,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Display Numbers
     function displayNumbers() {
-        const numbers = generateLottoNumbers();
         numbersContainer.innerHTML = '';
         
-        numbers.forEach((num, index) => {
-            setTimeout(() => {
-                const ball = document.createElement('div');
-                ball.className = `ball ${getBallClass(num)}`;
-                ball.textContent = num;
-                numbersContainer.appendChild(ball);
-            }, index * 100);
-        });
+        for (let i = 0; i < 5; i++) {
+            const row = document.createElement('div');
+            row.className = 'number-row';
+            numbersContainer.appendChild(row);
+            
+            const numbers = generateLottoNumbers();
+            
+            numbers.forEach((num, index) => {
+                setTimeout(() => {
+                    const ball = document.createElement('div');
+                    ball.className = `ball ${getBallClass(num)}`;
+                    ball.textContent = num;
+                    row.appendChild(ball);
+                }, (i * 100) + (index * 50));
+            });
+        }
     }
 
     // Toggle Theme
