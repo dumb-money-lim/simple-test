@@ -208,6 +208,22 @@ body.dark-mode .form-group textarea {
     background-color: #218838;
 }
 
+.comments-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+body.dark-mode .comments-section {
+    border-top-color: rgba(255,255,255,0.1);
+}
+
+.comments-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
 footer {
     margin-top: 2rem;
     font-size: 0.8rem;
