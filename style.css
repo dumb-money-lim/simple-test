@@ -1,1 +1,135 @@
-/* Add styles here */
+:root {
+    --bg-color: #f4f4f9;
+    --container-bg: #ffffff;
+    --text-color: #333333;
+    --primary-color: #4a90e2;
+    --btn-hover: #357abd;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode {
+    --bg-color: #1a1a1a;
+    --container-bg: #2d2d2d;
+    --text-color: #f0f0f0;
+    --primary-color: #61afef;
+    --btn-hover: #4b89c3;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    background-color: var(--container-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+.theme-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: opacity 0.2s;
+}
+
+.theme-btn:hover {
+    opacity: 0.9;
+}
+
+.numbers-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    min-height: 80px;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    animation: bounce 0.5s ease;
+}
+
+/* Lotto Ball Colors */
+.ball-1 { background-color: #fbc400; } /* 1-10: Yellow */
+.ball-2 { background-color: #69c8f2; } /* 11-20: Blue */
+.ball-3 { background-color: #ff7272; } /* 21-30: Red */
+.ball-4 { background-color: #aaa; }    /* 31-40: Gray */
+.ball-5 { background-color: #b0d840; } /* 41-45: Green */
+
+@keyframes bounce {
+    0% { transform: scale(0); }
+    70% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+.generate-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.generate-btn:hover {
+    background-color: var(--btn-hover);
+}
+
+footer {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
