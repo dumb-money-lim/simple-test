@@ -3,27 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="나만의 행운 번호를 무료로 생성하세요! 최적화된 알고리즘으로 제공되는 로또 번호 생성기. 다크 모드 지원 및 편리한 사용성 제공.">
+    <meta name="keywords" content="로또, 로또번호생성기, 행운의숫자, 로또추천, 무료로또번호">
+    <meta property="og:title" content="로또 번호 생성기 - 당신의 행운을 잡으세요">
+    <meta property="og:description" content="간편하고 빠른 로또 번호 생성기. 5세트 번호를 한 번에 확인하세요.">
     <meta name="google-adsense-account" content="ca-pub-9450701475763016">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9450701475763016"
      crossorigin="anonymous"></script>
-    <title>로또 번호 생성기</title>
+    <title>로또 번호 생성기 - 무료 행운 번호 추출기</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="light-mode">
     <div class="container">
         <header>
-            <h1>로또 번호 생성기</h1>
+            <div class="logo-area">
+                <h1>로또 번호 생성기</h1>
+                <p class="subtitle">최적화된 알고리즘으로 생성하는 행운의 숫자</p>
+            </div>
             <button id="theme-toggle" class="theme-btn">다크 모드</button>
         </header>
         
-        <main>
+        <nav class="site-nav">
+            <a href="#generator">생성기</a>
+            <a href="#about">정보</a>
+            <a href="#strategy">로또 팁</a>
+            <a href="#partnership">제휴문의</a>
+        </nav>
+
+        <main id="generator">
             <div id="lotto-numbers" class="numbers-container">
                 <div class="placeholder">행운의 번호를 생성해보세요!</div>
             </div>
-            <button id="generate-btn" class="generate-btn">번호 생성하기</button>
+            <button id="generate-btn" class="generate-btn">지금 번호 생성하기</button>
         </main>
+
+        <section id="about" class="info-section">
+            <h2>서비스 소개</h2>
+            <p>본 서비스는 사용자에게 무작위로 추출된 로또 번호 조합을 제공합니다. 수학적 난수 생성 알고리즘을 사용하여 1부터 45까지의 숫자 중 중복되지 않는 6개의 숫자를 선별합니다. 단순한 숫자 제공을 넘어, 사용자의 편리함을 위해 5세트 동시 생성 및 시각적인 번호 확인 기능을 제공하고 있습니다.</p>
+        </section>
+
+        <section id="strategy" class="info-section">
+            <h2>로또 번호 선택 팁</h2>
+            <div class="tip-card">
+                <h3>1. 균형 있는 조합</h3>
+                <p>홀수와 짝수의 비율을 3:3 또는 2:4 정도로 섞는 것이 통계적으로 더 빈번하게 등장하는 패턴입니다.</p>
+            </div>
+            <div class="tip-card">
+                <h3>2. 연속 번호 지양</h3>
+                <p>3개 이상의 연속된 번호(예: 1, 2, 3)가 나올 확률은 매우 낮으므로, 숫자를 골고루 분산시키는 것이 좋습니다.</p>
+            </div>
+            <div class="tip-card">
+                <h3>3. 합계 범위 확인</h3>
+                <p>선택한 6개 숫자의 총합이 100에서 170 사이인 경우가 전체 당첨 번호의 약 70% 이상을 차지합니다.</p>
+            </div>
+        </section>
         
-        <section class="partnership-section">
+        <section id="partnership" class="partnership-section">
             <h2>제휴 문의</h2>
             <form action="https://formspree.io/f/mwvynyyp" method="POST" class="partnership-form">
                 <div class="form-group">
@@ -61,8 +96,16 @@
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </section>
         
+        <section id="privacy" class="info-section" style="display: none;">
+            <h2>개인정보처리방침</h2>
+            <p>1. 수집하는 개인정보: 본 서비스는 사용자의 개인정보를 직접적으로 수집하거나 저장하지 않습니다.<br>
+            2. 쿠키 사용: 구글 애드센스 등 제3자 서비스는 광고 게재를 위해 쿠키를 사용할 수 있습니다.<br>
+            3. 데이터 보호: 사용자가 생성한 로또 번호는 서버에 저장되지 않으며 브라우저 종료 시 삭제됩니다.</p>
+            <button onclick="document.getElementById('privacy').style.display='none'" class="theme-btn" style="margin-top: 1rem;">닫기</button>
+        </section>
+
         <footer>
-            <p>&copy; 2026 로또 생성기</p>
+            <p>&copy; 2026 로또 생성기 | <a href="#" id="privacy-link">개인정보처리방침</a></p>
         </footer>
     </div>
     <script src="main.js"></script>

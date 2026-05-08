@@ -50,6 +50,82 @@ header {
     margin-bottom: 2rem;
 }
 
+.logo-area {
+    text-align: left;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-top: 0.3rem;
+}
+
+.site-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 0.8rem;
+    background-color: rgba(0,0,0,0.02);
+    border-radius: 0.5rem;
+}
+
+body.dark-mode .site-nav {
+    background-color: rgba(255,255,255,0.05);
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.site-nav a:hover {
+    color: var(--primary-color);
+}
+
+.info-section {
+    margin-top: 3rem;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.info-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+}
+
+.info-section p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.tip-card {
+    background-color: rgba(0,0,0,0.02);
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+body.dark-mode .tip-card {
+    background-color: rgba(255,255,255,0.05);
+}
+
+.tip-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.tip-card p {
+    font-size: 0.9rem;
+}
+
 h1 {
     font-size: 1.5rem;
 }
@@ -228,4 +304,14 @@ footer {
     margin-top: 2rem;
     font-size: 0.8rem;
     opacity: 0.7;
+}
+
+footer a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }

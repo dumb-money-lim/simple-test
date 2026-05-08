@@ -58,4 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     generateBtn.addEventListener('click', displayNumbers);
     themeToggle.addEventListener('click', toggleTheme);
+
+    const privacyLink = document.getElementById('privacy-link');
+    const privacySection = document.getElementById('privacy');
+    privacyLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        privacySection.style.display = 'block';
+        privacySection.scrollIntoView({ behavior: 'smooth' });
+    });
 });
